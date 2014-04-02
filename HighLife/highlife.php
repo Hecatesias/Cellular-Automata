@@ -1,13 +1,5 @@
 #!/usr/bin/env php
 <?php
-// highlife.php for life in /home/lagard_v/Life
-// 
-// Made by Vanessa LAGARDETTE
-// Login   <lagard_v@etna-alternance.net>
-// 
-// Started on  Wed Dec  4 17:02:53 2013 Vanessa LAGARDETTE
-// Last update Wed Dec  4 17:25:47 2013 Vanessa LAGARDETTE
-//
 
 define("X", 20);
 define("Y", 20);
@@ -60,9 +52,9 @@ function evolve(&$grid) //code de progression des cellules
 	    if ($grid_bis[$j_2][$i_2] == 1)
 	      $k++;
 	$k -= $grid[$j][$i];
-	if ($k == 3 || $k == 6) // regle 1 naissance
+	if ($k == 3 || $k == 6) // règle 1 naissance
 	  $grid[$j][$i] = 1;
-	else if ($k == 2 || $k == 3) // regle 2 stable
+	else if ($k == 2 || $k == 3) // règle 2 stable
 	  $grid[$j][$i] = $grid[$j][$i];
 	else
 	  $grid[$j][$i] = 0; // mort
