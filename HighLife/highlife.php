@@ -54,7 +54,7 @@ function evolve(&$grid) //code de progression des cellules
 	$k -= $grid[$j][$i];
 	if ($k == 3 || $k == 6) // règle 1 naissance
 	  $grid[$j][$i] = 1;
-	else if ($k == 2 || $k == 3) // règle 2 stable
+	else if ($k == 2 || $k == 3) // règle 2 état stable
 	  $grid[$j][$i] = $grid[$j][$i];
 	else
 	  $grid[$j][$i] = 0; // mort
