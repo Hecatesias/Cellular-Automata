@@ -1,13 +1,5 @@
 #!/usr/bin/env php
 <?php
-// daynight.php for life in /home/lagard_v/Life
-// 
-// Made by Vanessa LAGARDETTE
-// Login   <lagard_v@etna-alternance.net>
-// 
-// Started on  Wed Dec  4 17:21:21 2013 Vanessa LAGARDETTE
-// Last update Wed Dec  4 17:32:06 2013 Vanessa LAGARDETTE
-//
 
 define("X", 20);
 define("Y", 20);
@@ -60,11 +52,11 @@ function evolve(&$grid) //code de progression des cellules
 	    if ($grid_bis[$j_2][$i_2] == 1)
 	      $k++;
 	$k -= $grid[$j][$i];
-	if ($k == 3 || $k == 6 || $k == 7 || $k == 8) //regle 1 naissance
+	if ($k == 3 || $k == 6 || $k == 7 || $k == 8) //règle 1 naissance
 	  $grid[$j][$i] = 1;
-	else if ($k == 3 || $k == 4 || $k == 6 || $k == 7 || $k == 8) // regle 2 etat stable
+	else if ($k == 3 || $k == 4 || $k == 6 || $k == 7 || $k == 8) // règle 2 etat stable
 	  $grid[$j][$i] = $grid[$j][$i];
-	else // regle 3 mort
-	  $grid[$j][$i] = 0;
+	else
+	  $grid[$j][$i] = 0; //règle 3 mort
       }
 }
